@@ -1,0 +1,200 @@
+Archive member included to satisfy reference by file (symbol)
+
+.pio/build/debug/libBoardBSP.a(startup.o)
+                              (_start)
+/home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+                              .pio/build/debug/libBoardBSP.a(startup.o) (__libc_init_array)
+
+Discarded input sections
+
+ .text          0x0000000000000000       0x60 .pio/build/debug/src/assemblySubroutine.o
+ .data          0x0000000000000000        0x0 .pio/build/debug/src/assemblySubroutine.o
+ .bss           0x0000000000000000        0x0 .pio/build/debug/src/assemblySubroutine.o
+ .debug_line    0x0000000000000000       0xcb .pio/build/debug/src/assemblySubroutine.o
+ .debug_info    0x0000000000000000       0x26 .pio/build/debug/src/assemblySubroutine.o
+ .debug_abbrev  0x0000000000000000       0x14 .pio/build/debug/src/assemblySubroutine.o
+ .debug_aranges
+                0x0000000000000000       0x20 .pio/build/debug/src/assemblySubroutine.o
+ .debug_str     0x0000000000000000       0x46 .pio/build/debug/src/assemblySubroutine.o
+ .riscv.attributes
+                0x0000000000000000       0x24 .pio/build/debug/src/assemblySubroutine.o
+ .text          0x0000000000000000        0x0 .pio/build/debug/src/main.o
+ .data          0x0000000000000000        0x0 .pio/build/debug/src/main.o
+ .bss           0x0000000000000000        0x0 .pio/build/debug/src/main.o
+ .text.delay    0x0000000000000000       0x4c .pio/build/debug/src/main.o
+ .text          0x0000000000000000        0x0 .pio/build/debug/libBoardBSP.a(startup.o)
+ .data          0x0000000000000000        0x0 .pio/build/debug/libBoardBSP.a(startup.o)
+ .bss           0x0000000000000000        0x0 .pio/build/debug/libBoardBSP.a(startup.o)
+ .data          0x0000000000000000        0x0 /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000004000000 axw !rl
+ram2             0x0000000004000000 0x0000000004000000 axw !rl
+dccm             0x00000000f0040000 0x0000000000010000 axw !rl
+ovl              0x00000000e0000000 0x0000000000002000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000000000                __comrv_cache_size = 0x0
+LOAD .pio/build/debug/src/assemblySubroutine.o
+LOAD .pio/build/debug/src/main.o
+START GROUP
+LOAD .pio/build/debug/libBoardBSP.a
+LOAD .pio/build/debug/libPSP.a
+LOAD /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a
+LOAD /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32ia/ilp32/libgcc.a
+END GROUP
+                0x0000000000001000                __stack_size = DEFINED (__stack_size)?__stack_size:0x1000
+                0x0000000000000000                __comrv_align_size = (__comrv_cache_size != 0x0)?__comrv_cache_alignment_size:0x0
+
+.text.init      0x0000000000000000       0xd8
+ *(.text.init)
+ .text.init     0x0000000000000000       0xd4 .pio/build/debug/libBoardBSP.a(startup.o)
+                0x0000000000000000                _start
+                0x00000000000000d8                . = ALIGN (0x8)
+ *fill*         0x00000000000000d4        0x4 
+
+.text           0x00000000000000d8      0x240
+ *(.text.unlikely .text.unlikely.*)
+ *(.text.startup .text.startup.*)
+ .text.startup.main
+                0x00000000000000d8      0x1ac .pio/build/debug/src/main.o
+                0x00000000000000d8                main
+ *(.text .text.*)
+ .text          0x0000000000000284       0x94 /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+                0x0000000000000284                __libc_init_array
+ *(COMRV_TEXT_SEC)
+ *(COMRV_TEXT_ASM)
+ *(.gnu.linkonce.t.*)
+                0x0000000000000318                . = ALIGN (0x4)
+
+.rela.dyn       0x0000000000000318        0x0
+ .rela.text.init
+                0x0000000000000318        0x0 .pio/build/debug/src/main.o
+ .rela.text     0x0000000000000318        0x0 .pio/build/debug/src/main.o
+
+.rodata         0x0000000000000318        0x0
+ *(.rdata)
+ *(.rodata .rodata.*)
+ *(.gnu.linkonce.r.*)
+ *(COMRV_RODATA_SEC)
+                0x0000000000000318                . = ALIGN (0x4)
+
+.reserved_ovl   0x0000000000000318     0x2000
+                0x0000000000000318                _OVERLAY_STORAGE_START_ADDRESS_ = .
+                0x0000000000002000                . = 0x2000
+ *fill*         0x0000000000000318     0x2000 
+
+.lalign         0x0000000000002318        0x0
+                0x0000000000002318                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_data_lma = .)
+
+.dalign         0x0000000000002318        0x0
+                0x0000000000002318                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_data = .)
+
+.data           0x0000000000002318       0x10
+ *(.data .data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000000002322                . = (. + 0xa)
+ *fill*         0x0000000000002318        0xa 
+                0x0000000000002328                . = ALIGN (0x8)
+ *fill*         0x0000000000002322        0x6 
+
+SW_INT          0x0000000004000000        0x4
+                0x0000000004000000                _sw_int_mem_ctrl = .
+                0x0000000000000004                . = 0x4
+ *fill*         0x0000000004000000        0x4 
+
+COMRV_DATA_SEC
+
+PSP_DATA_SEC
+
+.sdata          0x0000000000002328        0x0
+                0x0000000000002328                . = ALIGN (0x8)
+                0x0000000000002b28                __global_pointer$ = (. + 0x800)
+ *(.sdata .sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000000002328                . = ALIGN (0x8)
+ *(.srodata .srodata.*)
+                0x0000000000002328                . = ALIGN (0x8)
+                0x0000000000002328                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_edata = .)
+                [!provide]                        PROVIDE (edata = .)
+                [!provide]                        PROVIDE (_fbss = .)
+                0x0000000000002328                PROVIDE (__bss_start = .)
+
+.bss            0x0000000000002328        0x0
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.bss)
+                0x0000000000002328                . = ALIGN (0x8)
+                0x0000000000002328                _end = .
+
+.stack          0x0000000000002328     0x1000
+                0x0000000000002328                _heap_end = .
+                0x0000000000003328                . = (. + __stack_size)
+ *fill*         0x0000000000002328     0x1000 
+                0x0000000000003328                _sp = .
+
+.overlay_sec    0x0000000000003328        0x0
+                0x0000000000003328                __OVERLAY_CACHE_START__ = .
+                0x0000000000000000                . = __comrv_cache_size
+                0x0000000000003328                __OVERLAY_CACHE_END__ = .
+
+.ovlgrps        0x00000000e0000000        0x0
+                0x00000000e0000000                OVERLAY_START_OF_OVERLAYS = .
+ *(.ovlinput.*)
+                0x00000000e0000000                OVERLAY_END_OF_OVERLAYS = .
+OUTPUT(.pio/build/debug/firmware.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000      0x238
+ .debug_info    0x0000000000000000      0x212 .pio/build/debug/src/main.o
+ .debug_info    0x0000000000000212       0x26 .pio/build/debug/libBoardBSP.a(startup.o)
+
+.debug_abbrev   0x0000000000000000      0x16f
+ .debug_abbrev  0x0000000000000000      0x15b .pio/build/debug/src/main.o
+ .debug_abbrev  0x000000000000015b       0x14 .pio/build/debug/libBoardBSP.a(startup.o)
+
+.debug_loc      0x0000000000000000       0xad
+ .debug_loc     0x0000000000000000       0xad .pio/build/debug/src/main.o
+
+.debug_aranges  0x0000000000000000       0x48
+ .debug_aranges
+                0x0000000000000000       0x28 .pio/build/debug/src/main.o
+ .debug_aranges
+                0x0000000000000028       0x20 .pio/build/debug/libBoardBSP.a(startup.o)
+
+.debug_ranges   0x0000000000000000       0x88
+ .debug_ranges  0x0000000000000000       0x88 .pio/build/debug/src/main.o
+
+.debug_line     0x0000000000000000      0x604
+ .debug_line    0x0000000000000000      0x460 .pio/build/debug/src/main.o
+ .debug_line    0x0000000000000460      0x1a4 .pio/build/debug/libBoardBSP.a(startup.o)
+
+.debug_str      0x0000000000000000      0x191
+ .debug_str     0x0000000000000000      0x12b .pio/build/debug/src/main.o
+                                        0x165 (size before relaxing)
+ .debug_str     0x000000000000012b       0x66 .pio/build/debug/libBoardBSP.a(startup.o)
+                                         0x87 (size before relaxing)
+
+.comment        0x0000000000000000       0x28
+ .comment       0x0000000000000000       0x28 .pio/build/debug/src/main.o
+                                         0x29 (size before relaxing)
+ .comment       0x0000000000000028       0x29 /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+
+.riscv.attributes
+                0x0000000000000000       0x26
+ .riscv.attributes
+                0x0000000000000000       0x26 .pio/build/debug/src/main.o
+ .riscv.attributes
+                0x0000000000000026       0x24 .pio/build/debug/libBoardBSP.a(startup.o)
+ .riscv.attributes
+                0x000000000000004a       0x21 /home/xe-user106/.platformio/packages/toolchain-riscv/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32ia/ilp32/libc.a(lib_a-init.o)
+
+.debug_frame    0x0000000000000000       0x3c
+ .debug_frame   0x0000000000000000       0x3c .pio/build/debug/src/main.o
